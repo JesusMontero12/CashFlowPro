@@ -1,0 +1,108 @@
+.cardsRegisterSale {
+  margin-top: 15px;
+}
+
+.cardForm {
+  margin-bottom: 30px;
+  color: #03134b;
+  border-style: none;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #b2b8bd;
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.3);
+}
+
+.iconSearch {
+  color: white;
+  background-color: #03134b;
+}
+
+.tableProductsSale {
+  th {
+    background: #b2b8bd;
+  }
+  td {
+    background: #b2b8bd;
+  }
+}
+
+.btnActionTable {
+  margin: 0;
+  padding: 0.1875rem;
+  border-style: none;
+  background-color: transparent;
+}
+
+.switchButton {
+  margin: auto;
+}
+
+.floatingLabel {
+  font-size: 14px !important;
+}
+
+.inputsSale {
+  font-size: 14px !important;
+  height: 40px;
+}
+
+.buttonSale {
+  width: 95%;
+  margin: auto;
+  background-color: #03134b;
+  border-style: none;
+}
+
+.cardSale {
+  margin-bottom: 15px;
+  color: #03134b;
+  border-style: none;
+  background-color: #b2b8bd;
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.3);
+}
+
+.cardSaleTitle {
+  color: #03134b;
+  text-align: center;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.saleDetails {
+  display: flex;
+  justify-content: space-between;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 15px;
+  color: #03134b;
+  border-style: none;
+  background-color: #b2b8bd;
+}
+
+.cardSellerDetails {
+  margin-bottom: 30px;
+  color: #03134b;
+  border-style: none;
+  background-color: #b2b8bd;
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.3);
+}
+
+.sellerDetailsTitle {
+  color: #03134b;
+  text-align: center;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.statisticsDetailsItem {
+  display: flex;
+  justify-content: space-between;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 15px;
+  color: #03134b;
+  border-style: none;
+  background-color: #b2b8bd;
+}

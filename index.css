@@ -1,0 +1,30 @@
+/* variables paleta de colores */
+:root {
+  --primarycolor: #1f1e30;
+  --secondarycolor: #198754;
+  --whitecolor: #ffff;
+  --blackcolor: #0000;
+}
+
+/* para titulos */
+.titles-fonts {
+  font-family: Montserrat;
+  font-weight: 800;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* para textos */
+.texts-fonts {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 0.75rem;
+  text-align: left;
+}
+
+
+.icon {
+  margin-right: 10px;
+  font-size: 20px;
+  color: inherit;
+}

@@ -1,0 +1,72 @@
+.containerGreeting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.9375rem 0rem 0.3125rem 0rem;
+}
+
+.titteGreetings {
+  font-weight: 600 !important;
+}
+
+/* estilos de; search */
+.search-bar {
+  display: flex;
+  justify-content: right;
+  padding: 10px;
+}
+
+.search-input-group {
+  width: 18.75rem;
+  border-radius: 3.125rem;
+  overflow: hidden;
+  background-color: var(--whitecolor);
+}
+
+.search-icon {
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.search-input {
+  border: none;
+  box-shadow: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.search-input::placeholder {
+  color: #bbb;
+}
+
+.profile-image {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-image:hover {
+  transform: scale(1.1);
+}
+
+.custom-dropdown-toggle {
+  margin: 2px 5px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.custom-dropdown-toggle::after {
+  display: none;
+}
+
+.custom-dropdown-toggle:hover,
+.custom-dropdown-toggle:focus,
+.custom-dropdown-toggle:active {
+  background-color: transparent!important; /* Quita el fondo en hover, focus y active */
+  box-shadow: none!important; /* Elimina cualquier sombra */
+}

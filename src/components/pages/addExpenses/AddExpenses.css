@@ -1,0 +1,28 @@
+.cardFormExpenses {
+  width: 80%;
+  margin: auto;
+  padding: 20px !important;
+  border-style: none;
+  border-radius: 5px;
+  background-color: #b2b8bd;
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.3);
+  h1 {
+    margin: 5px 5px 30px 5px;
+    color: #03134b;
+    text-align: center;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 32px;
+  }
+}
+
+.floatingLabel {
+  margin-bottom: 30px;
+}
+
+.buttonAddExpenses {
+  margin: auto;
+  width: 95%;
+  background-color: #03134b;
+  border-style: none;
+}

@@ -1,0 +1,32 @@
+.table-container {
+  padding: 1rem 0.3125rem;
+  border-radius: 8px;
+  background-color: #f8f9fa; /* Fondo claro */
+}
+
+.minimal-table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.minimal-table th,
+.minimal-table td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 12px;
+}
+
+.minimal-table thead {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.minimal-table tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+.minimal-table .btn-outline-primary,
+.minimal-table .btn-outline-danger {
+  margin: 0.3125rem 0rem;
+  border-radius: 20px;
+}

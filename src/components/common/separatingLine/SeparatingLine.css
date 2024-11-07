@@ -1,0 +1,29 @@
+.custom-divider {
+  position: relative;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.custom-divider:before,
+.custom-divider:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background: #dee2e6; 
+}
+
+.custom-divider:before {
+  left: 0;
+}
+
+.custom-divider:after {
+  right: 0;
+}
+
+.custom-divider span {
+  background: white; 
+  padding: 0 10px;
+  z-index: 1; 
+}
