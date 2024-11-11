@@ -1,53 +1,66 @@
-import "./ListProduct.css";
-import React from "react";
-import { Button, Table } from "react-bootstrap";
-import { products } from "../../../data/productsMock";
+import { Button, Modal, Table } from "react-bootstrap";
+import EditProductContainer from "../editProduct/EditProductContainer";
 
-const ListProduct = () => {
+const ListProduct = ({ data }) => {
+  const {
+    items,
+    message,
+    show,
+    selectedItem,
+    setSelectedItem,
+    deleteProductById,
+    updateProduct,
+    setShow,
+    handleClose,
+    handleShow,
+    addNewColor,
+    addNewSize,
+    addNewPhoto,
+    addNewCategory,
+  } = data;
+
   return (
     <>
-      <div className="table-container">
+      {message && <p>{message}</p>}
+      <div className="table-container mt-5">
         <Table responsive bordered hover className="minimal-table">
           <thead>
             <tr>
-              <th>#</th>
-              <th>Photos</th>
-              <th>Name</th>
-              <th>Cost price</th>
-              <th>Price</th>
-              <th>Profit</th>
-              <th>Sold</th>
+              <th>ID</th>
+              <th>PHOTO</th>
+              <th>NAME</th>
+              <th>COST</th>
+              <th>PRICE</th>
+              <th>PROFIT</th>
+              <th>SOLD</th>
               <th>M.R.Q</th>
               <th>R.D</th>
               <th>L.U.D</th>
-              <th>Actions</th>
+              <th>ACTION</th>
             </tr>
           </thead>
           <tbody>
-            {products.map((product, index) => (
-              <tr key={product.id || index}>
-                <td>{index + 1}</td>
+            {items?.map((item) => (
+              <tr key={item.id}>
+                <td>{item.id.substr(0, 1) + "..."}</td>
                 <td>
                   <img
-                    src={product.photo[0]}
-                    alt={`Product ${index}`}
+                    src={item.photo[0]}
+                    alt={`item ${0}`}
                     style={{ width: "50px" }}
                   />
                 </td>
-                <td>{product.name}</td>
-                <td>{product.costPrice}</td>
-                <td>{product.price}</td>
-                <td>{product.price - product.costPrice}</td>
-                <td>{product.sale}</td>
-                <td>{product.minimumReplenishmentQuantity}</td>
-                <td>{product.registrationDate}</td>
-                <td>{product.lastUpdateDate}</td>
+                <td>{item.name.substr(0, 8) + "..."}</td>
+                <td>{Number(item.costPrice).toLocaleString()}</td>
+                <td>{Number(item.price).toLocaleString()}</td>
+                <td>{Number(item.price - item.costPrice).toLocaleString()}</td>
+                <td>{item.sale}</td>
+                <td>{item.minimumReplenishmentQuantity}</td>
+                <td>{item.registrationDate}</td>
+                <td>{item.lastUpdateDate}</td>
                 <td>
-                  <Button variant="outline-primary" size="sm">
-                    Editar
-                  </Button>
-                  <Button variant="outline-danger" size="sm">
-                    Eliminar
+                  <Button variant="primary" onClick={() => handleShow(item)}>
+                    Show
                   </Button>
                 </td>
               </tr>
@@ -55,6 +68,25 @@ const ListProduct = () => {
           </tbody>
         </Table>
       </div>
+
+      <Modal
+        show={show}
+        onHide={handleClose}
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>Product Editor Panel</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <EditProductContainer
+            itemSelected={selectedItem}
+            setSelectedItem={setSelectedItem}
+            deleteProductById={deleteProductById}
+            updateProduct={updateProduct}
+          />
+        </Modal.Body>
+      </Modal>
     </>
   );
 };

@@ -89,8 +89,7 @@ const FormRegisterProductContainer = () => {
   // Funcion para guardar los datos ingresados al estado de product
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(product);
-    //addProductToFirestore();
+    addProductToFirestore();
   };
 
   // Validación en el método handleAddColor (cambia el estado para determinar si se mostrara o no el componente input color)
